@@ -23,19 +23,22 @@ import {
 import {NavigationContainer} from '@react-navigation/native';
 import HomeScreen from './src/screens/HomeScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import DetailScreen from './src/screens/DetailScreen';
+import {SeriesProvider} from './src/API/ContextAPI';
 
 const Tab = createBottomTabNavigator();
 
 const App = () => {
 
   return (
-      <NavigationContainer>
-        <Tab.Navigator>
-          <Tab.Screen name="Home" component={HomeScreen} />
-          {/* tODO: glöm inte lägga till detail screen! */}
-          {/*<Tab.Screen name="Settings" component={SettingsScreen} />*/}
-        </Tab.Navigator>
-      </NavigationContainer>
+      <SeriesProvider>
+        <NavigationContainer>
+          <Tab.Navigator>
+            <Tab.Screen name="Home" component={HomeScreen} />
+            <Tab.Screen name="Detail Screen" component={DetailScreen} />
+          </Tab.Navigator>
+        </NavigationContainer>
+      </SeriesProvider>
   );
 };
 

@@ -6,7 +6,7 @@ const HomeScreen = () => {
 
     return (
         <View>
-            <Text>Hello World!</Text>
+            <Text style={{color: 'black'}}>Hello World!</Text>
         </View>
     );
 };
