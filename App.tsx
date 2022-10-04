@@ -21,9 +21,9 @@ import {
 
 
 import {NavigationContainer} from '@react-navigation/native';
-import HomeScreen from './src/screens/HomeScreen';
+import HomeScreen from './src/Screens/Home/HomeScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import DetailScreen from './src/screens/DetailScreen';
+import DetailScreen from './src/Screens/Detail/DetailScreen';
 import {SeriesProvider} from './src/API/ContextAPI';
 
 const Tab = createBottomTabNavigator();

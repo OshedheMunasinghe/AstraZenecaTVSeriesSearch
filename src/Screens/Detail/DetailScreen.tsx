@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import {ScrollView} from 'react-native';
-import {SeriesContext} from '../API/ContextAPI';
-import SeriesImageWithTextCard from '../components/SeriesImageTextCard/SeriesImageWithTextCard';
+import {SeriesContext} from '../../API/ContextAPI';
+import SeriesImageWithTextCard from '../../Components/SeriesImageTextCard/SeriesImageWithTextCard';
 
 
 const DetailScreen = () => {

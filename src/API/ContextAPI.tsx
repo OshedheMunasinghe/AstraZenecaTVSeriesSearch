@@ -4,7 +4,6 @@ import axios, {AxiosResponse} from 'axios';
 
 interface Shows {
     showNames: string[] | undefined,
-    showID : number[] | undefined, // todo ta bort
     smallImage: string[] | undefined,
 }
 
@@ -14,7 +13,6 @@ export const SeriesProvider = ({children}: PropsWithChildren) => {
     const [series, setSeries] = useState<Serie[]>()
 
     const showNames = series?.map( data => data.name)
-    const showID = series?.map( data => data.id) // todo ta bort jag har ingen anvädning till det!
     const smallImage = series?.map(data => data.image.medium)
 
     useEffect(() => {
@@ -28,7 +26,6 @@ export const SeriesProvider = ({children}: PropsWithChildren) => {
 
     const value:Shows = {
         showNames: showNames,
-        showID: showID, // todo ta bort!
         smallImage: smallImage
     }
 
